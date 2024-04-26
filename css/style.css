@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.topo{
+    background-color: #229B77;
+    height: 175px;
+    padding-top: 25px; 
+}
+
+.logo{
+    background-color: #229B77;
+    height: 150px;
+    width: 300px;
+    margin-left: 50px;
+    float: left;
+}
+
+.menu{
+    background-color: #229B77;
+    height: 50px;
+    width: 750px;
+    margin-left: 400px;
+    float: right;
+    margin: 50px 90px 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.campo{
+    display: inline-block;
+    text-align: center;
+    width: 140px;
+    height: 37.5px;
+    padding-top: 12.5px;
+    background-color: #229B77;
+}
+
+.men_link{
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "verdana";
+    color: white;
+}
+
+.caixaLogin{
+    background-color: white;
+    display: flex;
+    height: 650px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.caixaCadastro{
+    background-color: white;
+    display: flex;
+    height: 850px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.rodape{
+    background-color: #229B77;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rodape p{
+    font-size: 20px;
+    font-family: "verdana";
+    color: white;
+}
+
+.titulo{
+    font-size: 50px;
+    font-family: Cambria;
+    color: rgb(82, 82, 82);
+    text-align: center;
+    font-weight: bold;
+    margin: 100px 0 70px 0;
+}
+
+.formulario{
+    font-size: 20px;
+    font-family: Cambria;
+    color: rgb(82, 82, 82);
+}
+
+.caixinha{
+    width: 400px;
+    height: 25px;
+    border-radius: 7px;
+}
+
+.botaoLogin{
+    float: right;
+    width: 120px;
+    height: 35px;
+    border-radius: 7px;
+    background-color: #229B77;
+    font-size: 18px;
+    font-family: Cambria;
+    font-weight: bold;
+    color: white;
+}
+
+.cadLink{
+    font-size: 18px;
+    font-family: Cambria;
+}
