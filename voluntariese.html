@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Conexão Solidária</title>
+    </head>
+    <body>
+        <header class="topo">
+            <figure class="logo">
+                <img src="figs/logo.jpg" alt="Logo Conexão Solidária" width="300" height="150">
+            </figure>
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html" >ONGs</a></li>
+                    <li><a href="sobrenos.html" >Sobre Nós</a></li>
+                    <li><a href="voluntariese.html" class="active">Voluntarie-se</a></li>
+                    <li><a href="doe.html" >Doe</a></li>
+                    <li><a href="login.html" >Login</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="caixa">
+            <h2 class="titulo">Seja um Voluntário</h2>
+            <form class="formulario" action="index.html">
+                
+                <label for="ong">Selecione a instituição de interesse: </label><br>
+                <select class="caixinha" name="ong" id="ong">
+                    <option value="ong1">Associação de Proteção e Bem Estar Animal Angelo Picone</option>
+                    <option value="ong2">Parceiros do Mar</option>
+                    <option value="ong3">Associação de Pais e Amigos dos Excepcionais - APAE de Londrina</option>
+                    <option value="ong4">ONG Viver</option>
+                    <option value="ong5">ONG AMMAR - Associação Maringaense de Ajuda aos Animais Resgatados</option>
+                </select><br><br><br>
+
+                <label>Disponibilidade semanal: </label><br>
+                    <input type="checkbox" id="seg" name="seg" />
+                    <label for="seg">Segunda-feira</label><br>
+                    <input type="checkbox" id="ter" name="ter" />
+                    <label for="ter">Terça-feira</label><br>
+                    <input type="checkbox" id="qua" name="qua" />
+                    <label for="qua">Quarta-feira</label><br>
+                    <input type="checkbox" id="qui" name="qui" />
+                    <label for="qui">Quinta-feira</label><br>
+                    <input type="checkbox" id="sex" name="sex" />
+                    <label for="sex">Sexta-feira</label><br>
+                    <input type="checkbox" id="sab" name="sab" />
+                    <label for="sab">Sábado</label><br>
+                    <input type="checkbox" id="dom" name="dom" />
+                    <label for="dom">Domingo</label>
+                <br><br><br>
+
+                <label>Disponibilidade de turno: </label><br>
+                    <input type="checkbox" id="m" name="m" />
+                    <label for="m">Matutino</label><br>
+                    <input type="checkbox" id="v" name="v" />
+                    <label for="v">Vespertino</label><br>
+                    <input type="checkbox" id="n" name="n" />
+                    <label for="n">Noturno</label>
+                <br><br><br><br>
+
+                <input class="botaoVol" type="submit" value="Voluntarie-se">
+
+            </form>
+        </section>
+        <footer class="rodape">
+            <p>&copy; 2024 - Conexão Solidária</p>
+        </footer>
+    </body>
+</html>
