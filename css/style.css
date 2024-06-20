@@ -125,6 +125,29 @@
     color: white;
 }
 
+.botaoLimpar{
+    width: 120px;
+    height: 35px;
+    border-radius: 7px;
+    background-color: #229B77;
+    font-size: 18px;
+    font-family: Cambria;
+    font-weight: bold;
+    color: white;
+}
+
+.botaoLista{
+    width: 120px;
+    height: 35px;
+    border-radius: 7px;
+    background-color: rgb(199, 20, 20);
+    font-size: 18px;
+    font-family: Cambria;
+    font-weight: bold;
+    color: white;
+    margin-top: 50px;
+}
+
 .botaoVol{
     float: right;
     width: 150px;
@@ -142,7 +165,7 @@
     width: 70px;
     height: 18px;
     border-radius: 7px;
-    background-color:rgb(117, 116, 116);
+    background-color:rgb(199, 20, 20);
     font-size: 12px;
     font-family: Cambria;
     color: white;
@@ -260,8 +283,29 @@
 
 #usuarioList{
     margin-top: 50px;
+    width: 650px;
+    list-style-type: none;    
 }
 
 #usuarioList li{
     margin-top: 10px;
+    font-family: Cambria;
+}
+
+#pesquisa{
+    width: 300px;
+    height: 32px;
+    border-radius: 7px;
+    margin-top: 100px;
+}
+
+.botaoPesquisa{
+    width: 120px;
+    height: 35px;
+    border-radius: 7px;
+    background-color: #229B77;
+    font-size: 18px;
+    font-family: Cambria;
+    font-weight: bold;
+    color: white;
 }

@@ -36,6 +36,43 @@ function deleteUsuario(usuarioId) {
   }
 }
 
+//Exclui lista de usuários
+function deleteLista(){
+  let itemLista = document.getElementById('usuarioList');
+  while(itemLista.firstChild){
+    itemLista.removeChild(itemLista.firstChild);
+  }
+
+  localStorage.removeItem('usuarioList');
+}
+
+//Pesquisa
+function pesquisaLista(){
+  let consulta = document.getElementById('pesquisa');
+  let arrayPesquisa = [];
+
+  let usuarioListElement = document.getElementById('usuarioList');
+  usuarioListElement.innerHTML = '';
+
+  for(let i = 0; i < usuarioList.length; i++){
+    if(usuarioList[i].nome === consulta.value){
+      let usuarioPesquisa = {
+        id: usuarioList[i].id,
+        data: usuarioList[i].data,
+        nome: usuarioList[i].nome,
+        email: usuarioList[i].email
+      };
+      arrayPesquisa.push(usuarioPesquisa);
+    } 
+  }
+
+  arrayPesquisa.forEach(function(usuario){
+    var listItem = document.createElement('li');
+    listItem.innerHTML = usuario.data + ' - Nome: '+ usuario.nome + ' -  Email: ' + usuario.email + '<button class="botaoExcluir" onclick="deleteUsuario(' + usuario.id + ')">Excluir</button>';
+    usuarioListElement.appendChild(listItem);
+  })
+}
+
 // Recupera lista de usuários do localStorage
 function getUsuarioList() {
   var storedList = JSON.parse(localStorage.getItem('usuarioList'));
@@ -49,7 +86,7 @@ function renderUsuarioList() {
 
   usuarioList.forEach(function (usuario) {
     var listItem = document.createElement('li');
-    listItem.innerHTML = '<span class="usuario-nome">' + usuario.nome + '</span> (Email: ' + usuario.email + ') <button class="botaoExcluir" onclick="deleteUsuario(' + usuario.id + ')">Excluir</button>';
+    listItem.innerHTML = usuario.data + ' - Nome: '+ usuario.nome + ' -  Email: ' + usuario.email + '<button class="botaoExcluir" onclick="deleteUsuario(' + usuario.id + ')">Excluir</button>';
     usuarioListElement.appendChild(listItem);
   });
 }
