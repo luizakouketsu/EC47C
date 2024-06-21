@@ -21,6 +21,28 @@ function addUsuario(nome, email) {
   renderUsuarioList();
 }
 
+// Event listener para o formulário de cadastro de usuários
+document.getElementById('formUsuario').addEventListener('submit', function (event) {
+  event.preventDefault();
+  var nome = document.getElementById('nome');
+  var email = document.getElementById('email');
+  addUsuario(nome.value, email.value);
+  nome.value = '';
+  email.value = '';
+});
+
+// Renderiza lista de usuário no HTML
+function renderUsuarioList() {
+  var usuarioListElement = document.getElementById('usuarioList');
+  usuarioListElement.innerHTML = '';
+
+  usuarioList.forEach(function (usuario) {
+    var listItem = document.createElement('li');
+    listItem.innerHTML = usuario.data + ' - Nome: '+ usuario.nome + ' -  Email: ' + usuario.email + '<button class="botaoExcluir" onclick="deleteUsuario(' + usuario.id + ')">Excluir</button>';
+    usuarioListElement.appendChild(listItem);
+  });
+}
+
 // Exclui usuário
 function deleteUsuario(usuarioId) {
   var novoUsuarioList = usuarioList.filter(function (usuario) {
@@ -42,8 +64,9 @@ function deleteLista(){
   while(itemLista.firstChild){
     itemLista.removeChild(itemLista.firstChild);
   }
-
-  localStorage.removeItem('usuarioList');
+  var novoUsuarioList = [];
+  usuarioList = novoUsuarioList;
+  localStorage.setItem('usuarioList', JSON.stringify(usuarioList));
 }
 
 //Pesquisa
@@ -79,30 +102,8 @@ function getUsuarioList() {
   usuarioList = storedList || []; 
 }
 
-// Renderiza lista de usuário no HTML
-function renderUsuarioList() {
-  var usuarioListElement = document.getElementById('usuarioList');
-  usuarioListElement.innerHTML = '';
-
-  usuarioList.forEach(function (usuario) {
-    var listItem = document.createElement('li');
-    listItem.innerHTML = usuario.data + ' - Nome: '+ usuario.nome + ' -  Email: ' + usuario.email + '<button class="botaoExcluir" onclick="deleteUsuario(' + usuario.id + ')">Excluir</button>';
-    usuarioListElement.appendChild(listItem);
-  });
-}
-
 // Recupera lista de usuários do localStorage
 getUsuarioList();
 
 // Renderiza lista de usuários no HTML
 renderUsuarioList();
-
-// Event listener para o formulário de cadastro de usuários
-document.getElementById('formUsuario').addEventListener('submit', function (event) {
-  event.preventDefault();
-  var nome = document.getElementById('nome');
-  var email = document.getElementById('email');
-  addUsuario(nome.value, email.value);
-  nome.value = '';
-  email.value = '';
-});
